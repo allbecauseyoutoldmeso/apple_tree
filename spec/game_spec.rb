@@ -16,11 +16,15 @@ describe Game do
     end
   end
 
-  describe('')
+  describe('#revealed_word') do
+    it 'initially returns the correct number of dashes' do
+      expect(game.revealed_word).to eq ['-', '-', '-', '-', '-', '-']
+    end
+  end
 
-  describe('#word') do
-    it 'returns the secret word' do
-      expect(game.word).to eq 'teacup'
+  describe('#secret_word') do
+    it 'returns the letters of the secret word' do
+      expect(game.secret_word).to eq ['t', 'e', 'a', 'c', 'u', 'p']
     end
   end
 
@@ -28,6 +32,10 @@ describe Game do
     it 'removes an apple if the guess is incorrect' do
       game.guess('i')
       expect(game.apples).to eq 9
+    end
+    it 'reveals a letter if the guess is correct' do
+      game.guess('c')
+      expect(game.revealed_word).to eq ['-', '-', '-', 'c', '-', '-'] 
     end
   end
 
