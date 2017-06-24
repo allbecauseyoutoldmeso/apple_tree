@@ -2,7 +2,7 @@ require 'game'
 
 describe Game do
 
-  subject(:game) { described_class.new(6) }
+  subject(:game) { described_class.new('teacup') }
 
   describe('#apples') do
     it 'initially returns 10' do
@@ -17,11 +17,8 @@ describe Game do
   end
 
   describe('#word') do
-    it 'returns a word' do
-      expect(game.word).to be_a(String)
-    end
-    it 'returns a word of the specified length' do
-      expect(game.word.length).to eq 6
+    it 'returns the secret word' do
+      expect(game.word).to eq 'teacup'
     end
   end
 

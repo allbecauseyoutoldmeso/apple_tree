@@ -5,10 +5,10 @@ class Game
   attr_reader :word
   attr_accessor :apples, :dashes
 
-  def initialize(word_length)
+  def initialize(word)
     @apples = 10
-    @word = WordMaker.new.get_word(word_length)
-    @dashes = '-' * word_length
+    @word = word
+    @dashes = '-' * word.length
   end
 
 end
