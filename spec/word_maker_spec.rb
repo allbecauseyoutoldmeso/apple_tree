@@ -4,7 +4,7 @@ describe WordMaker do
 
   subject(:word_maker) { described_class.new }
 
-  describe 'get word' do
+  describe '#get word' do
     it 'returns a word' do
       expect(word_maker.get_word(6)).to be_a(String)
     end
