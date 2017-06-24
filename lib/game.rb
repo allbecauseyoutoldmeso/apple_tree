@@ -1,4 +1,5 @@
 require_relative 'word_maker'
+require_relative 'dash'
 
 class Game
 
@@ -8,7 +9,13 @@ class Game
   def initialize(word)
     @apples = 10
     @word = word
-    @dashes = '-' * word.length
+    @dashes = make_dashes
+  end
+
+  def make_dashes
+    dashes = []
+    word.each_char { |char| dashes.push(Dash.new(char)) }
+    dashes
   end
 
   def guess(letter)

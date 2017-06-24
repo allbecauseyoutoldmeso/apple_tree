@@ -11,10 +11,12 @@ describe Game do
   end
 
   describe('#dashes') do
-    it 'returns a string of dashes the same length as the word' do
-      expect(game.dashes).to eq '------'
+    it 'returns an array of dashes' do
+      expect(game.dashes.all? { |element| element.is_a?(Dash) }).to eq true
     end
   end
+
+  describe('')
 
   describe('#word') do
     it 'returns the secret word' do
