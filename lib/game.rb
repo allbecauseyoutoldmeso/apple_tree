@@ -23,6 +23,7 @@ class Game
 
   def console_feedback
     puts revealed_word.join
+    puts "#{apples} apples left."
     puts 'you lose!' if apples == 0
     puts 'you win!' if word_keeper.guessed_word?
   end
