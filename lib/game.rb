@@ -25,17 +25,11 @@ class Game
   end
 
   def guess(letter)
-    if ! secret_word.include?(letter)
-      self.apples -= 1
-    else
-      reveal_letters(letter)
-    end
+    secret_word.include?(letter) ? reveal_letters(letter) : self.apples -= 1
   end
 
   def reveal_letters(letter)
-    dashes.each do |dash|
-      dash.reveal_letter if dash.letter == letter
-    end
+    dashes.each { |dash| dash.reveal_letter if dash.letter == letter }
   end
 
 end
