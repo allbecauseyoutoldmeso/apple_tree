@@ -16,9 +16,23 @@ describe WordKeeper do
     end
   end
 
-  describe('#secret_word') do
+  describe('#secret_word_includes?') do
     it 'returns the letters of the secret word' do
-      expect(word_keeper.secret_word).to eq ['t', 'e', 'a', 'c', 'u', 'p']
+      expect(word_keeper.secret_word_includes?('p')).to eq true
+    end
+  end
+
+  describe('#reveal_letters') do
+    it 'reveals instances of the proposed letter' do
+      word_keeper.reveal_letters('c')
+      expect(word_keeper.revealed_word).to eq ['-', '-', '-', 'c', '-', '-']
+    end
+  end
+
+  describe('#guessed_word?') do
+    it 'returns true if all letters are revealed' do
+      ['t','e','a','c','u','p'].each { |letter| word_keeper.reveal_letters(letter) }
+      expect(word_keeper.guessed_word?).to eq true
     end
   end
 

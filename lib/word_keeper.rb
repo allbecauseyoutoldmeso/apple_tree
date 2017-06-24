@@ -16,12 +16,16 @@ class WordKeeper
     dashes.map { |dash| dash.revealed_symbol }
   end
 
-  def secret_word
-    dashes.map { |dash| dash.letter }
+  def secret_word_includes?(letter)
+    dashes.map { |dash| dash.letter }.include?(letter)
   end
 
   def reveal_letters(letter)
     dashes.each { |dash| dash.reveal_letter if dash.letter == letter }
+  end
+
+  def guessed_word?
+    dashes.all? { |dash| dash.letter != '-' }
   end
 
 end
