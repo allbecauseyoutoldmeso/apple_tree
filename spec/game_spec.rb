@@ -23,6 +23,10 @@ describe Game do
   end
 
   describe('#guess') do
+    it 'removes an apple if the guess is incorrect' do
+      game.guess('i')
+      expect(game.apples).to eq 9
+    end
   end
 
 end

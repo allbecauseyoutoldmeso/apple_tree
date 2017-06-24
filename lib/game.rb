@@ -11,4 +11,8 @@ class Game
     @dashes = '-' * word.length
   end
 
+  def guess(letter)
+    self.apples -= 1 if ! word.include?(letter)
+  end
+
 end
