@@ -1,35 +1,23 @@
 require_relative 'word_maker'
+require_relative 'word_keeper'
 require_relative 'dash'
 
 class Game
 
-  attr_accessor :apples, :dashes
+  attr_reader :word_keeper
+  attr_accessor :apples
 
   def initialize(word)
     @apples = 10
-    @dashes = make_dashes(word)
-  end
-
-  def make_dashes(word)
-    dashes = []
-    word.each_char { |char| dashes.push(Dash.new(char)) }
-    dashes
+    @word_keeper = WordKeeper.new(word)
   end
 
   def revealed_word
-    dashes.map { |dash| dash.revealed_symbol }
-  end
-
-  def secret_word
-    dashes.map { |dash| dash.letter }
+    word_keeper.revealed_word
   end
 
   def guess(letter)
-    secret_word.include?(letter) ? reveal_letters(letter) : self.apples -= 1
-  end
-
-  def reveal_letters(letter)
-    dashes.each { |dash| dash.reveal_letter if dash.letter == letter }
+    word_keeper.secret_word.include?(letter) ? word_keeper.reveal_letters(letter) : self.apples -= 1
   end
 
 end
