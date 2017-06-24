@@ -11,6 +11,9 @@ describe Game do
   end
 
   describe('#dashes') do
+    it 'returns a string of dashes the same length as the word' do
+      expect(game.dashes).to eq '------'
+    end
   end
 
   describe('#word') do
