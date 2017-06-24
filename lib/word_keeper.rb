@@ -25,7 +25,7 @@ class WordKeeper
   end
 
   def guessed_word?
-    dashes.all? { |dash| dash.letter != '-' }
+    dashes.all? { |dash| dash.revealed_symbol != '-' }
   end
 
 end
