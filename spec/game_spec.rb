@@ -21,4 +21,22 @@ describe Game do
     end
   end
 
+  describe('#console feedback') do
+    it 'output a string representing the revealed letters to the console' do
+      expect { game.console_feedback }.to output("------\n").to_stdout
+    end
+    it 'returns a lose message after ten incorrect guesses' do
+      ['w','x','f','y','m','l','d','r','h','k'].each { |letter| game.guess(letter) }
+      expect { game.console_feedback }.to output("------\nyou lose!\n").to_stdout
+    end
+    it 'returns a win message if the whole word is revealed' do
+      ['t','e','a','c','u','p'].each { |letter| game.guess(letter) }
+      expect { game.console_feedback }.to output("teacup\nyou win!\n").to_stdout
+    end
+  end
+
+
+
+
+
 end
