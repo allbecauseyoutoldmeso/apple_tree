@@ -6,6 +6,7 @@
 * A Ruby/Sinatra app, TDDed using RSpec and Capybara.
 * Uses an API request to 'setgetgo.com' to generate a random obscure word.
 * You can play it <a href='http://sample-env.x5bkmmyqkj.us-east-1.elasticbeanstalk.com'>here</a>!
+* Surprisingly addictive if you're as much of a word-nerd as me.
 
 <img width="1128" alt="screen shot 2017-06-25 at 17 19 44" src="https://user-images.githubusercontent.com/25392162/27519681-cd051e04-59f0-11e7-80b4-9a48cd5f9852.png">          
 
