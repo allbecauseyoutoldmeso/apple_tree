@@ -25,5 +25,10 @@ class AppleTree < Sinatra::Base
     redirect '/game'
   end
 
+  get '/testgame' do
+    session[:game] = Game.new('teacup')
+    redirect '/game'
+  end
+
   run! if app_file == $0
 end
