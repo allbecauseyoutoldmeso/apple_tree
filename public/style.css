@@ -1,0 +1,16 @@
+body {
+    background-color: #f7efda;
+    color: #87ab91;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70px;
+}
+
+#guess-button {
+  background-color: #87ab91;
+  border: none;
+  color: #f7efda;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 16px;
+}

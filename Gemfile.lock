@@ -1,8 +1,31 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    clean_words (0.0.2)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
+    capybara (2.14.3)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    childprocess (0.7.0)
+      ffi (~> 1.0, >= 1.0.11)
     diff-lcs (1.3)
+    ffi (1.9.18)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_portile2 (2.1.0)
+    nokogiri (1.7.1)
+      mini_portile2 (~> 2.1.0)
+    public_suffix (2.0.5)
+    rack (1.6.5)
+    rack-protection (1.5.3)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -16,13 +39,26 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    rubyzip (1.2.1)
+    selenium-webdriver (3.4.3)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
+    sinatra (1.4.8)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    tilt (2.0.7)
+    xpath (2.1.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  clean_words
+  capybara
   rspec
+  selenium-webdriver
+  sinatra
 
 BUNDLED WITH
    1.15.1
