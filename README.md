@@ -3,7 +3,7 @@
 * Personal project.
 * A fruitarian version of the game traditionally known as 'hangman'.
 * Try to guess the hidden word letter by letter.  For every incorrect guess an apple falls.  If all the apples fall before you guess the whole word, you lose!
-* A Ruby/Sinatra app.
+* A Ruby/Sinatra app, TDDed using RSpec and Capybara.
 * Uses an API request to 'setgetgo.com' to generate a random obscure word.
 * You can play it <a href='http://sample-env.x5bkmmyqkj.us-east-1.elasticbeanstalk.com'>here</a>!
 
