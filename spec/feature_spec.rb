@@ -13,11 +13,6 @@ feature 'playing appletree' do
     expect(page).to have_content '------'
   end
 
-  # scenario 'game starts with ten apples' do
-  #   start_game
-  #   expect(page).to have_css("img[src*='/apple.png']")
-  # end
-
   scenario 'when a correct letter is submitted it is added to the revealed word' do
     visit '/testgame'
     fill_in :guess, with: 't'
@@ -25,11 +20,14 @@ feature 'playing appletree' do
     expect(page).to have_content 't-----'
   end
 
-  # scenario 'when an incorrect letter is submitted the apples are decreased by one' do
-  #   visit '/testgame'
-  #   fill_in :guess, with: 'x'
-  #   click_button 'guess'
-  #   expect(page).to have_css(..?)
-  # end
+  scenario 'a win message is displayed if all the letters are guessed' do
+    win_game
+    expect(page).to have_content 'you won!'
+  end
+
+  scenario 'a lose message is displayed if all the letters are guessed' do
+    lose_game
+    expect(page).to have_content 'you lose. the word was teacup.'
+  end
 
 end
