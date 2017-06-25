@@ -6,6 +6,10 @@ body {
   text-align: center;
 }
 
+.gameover {
+  font-size: 45px;
+}
+
 #apple-picture {
   height: 100px;
   width: 84px;
@@ -16,7 +20,7 @@ body {
   margin: 0px;
 }
 
-#guess-a-letter {
+.instructions {
   font-size: 45px;
 }
 

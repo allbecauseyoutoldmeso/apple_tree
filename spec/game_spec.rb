@@ -21,6 +21,34 @@ describe Game do
     end
   end
 
+  describe('#game_over?') do
+    it 'is false initially' do
+      expect(game.game_over?).to eq false
+    end
+    it 'returns true after ten incorrect guesses' do
+      ['w','x','f','y','m','l','d','r','h','k'].each { |letter| game.guess(letter) }
+      expect(game.game_over?).to eq true
+    end
+    it 'returns true if all the letters are correct' do
+      ['t','e','a','c','u','p'].each { |letter| game.guess(letter) }
+      expect(game.game_over?).to eq true
+    end
+  end
+
+  describe('#final_message') do
+    it 'returns a win message' do
+      ['t','e','a','c','u','p'].each { |letter| game.guess(letter) }
+      expect(game.final_message).to eq 'you won!'
+    end
+    it 'returns a lose message' do
+      ['w','x','f','y','m','l','d','r','h','k'].each { |letter| game.guess(letter) }
+      expect(game.final_message).to eq 'you lose. the word was teacup.'
+    end
+
+  end
+
+
+
   describe('#console feedback') do
     it 'outputs string representing the revealed letters, and a statement about remaining apples, to the console' do
       expect { game.console_feedback }.to output("------\n10 apples left.\n").to_stdout
