@@ -10,10 +10,16 @@
 
   <p>apple tree</p>
 
-  <img src='/apple.png'
+  <%@game.apples.times do%>
+    <img src='/apple.png'>
+  <%end%>
 
+  <p><%=@game.revealed_word%></p>
 
-  <p>------</p>
+  <form>
+    guess a letter: <input type="text" name="guess"/>
+    <input id="guess-button" type="submit" value="guess"/>
+  </form>
 
 </body>
 

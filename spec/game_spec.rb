@@ -17,7 +17,7 @@ describe Game do
     end
     it 'reveals a letter if the guess is correct' do
       game.guess('c')
-      expect(game.revealed_word).to eq ['-', '-', '-', 'c', '-', '-']
+      expect(game.revealed_word).to eq '---c--'
     end
   end
 
@@ -34,9 +34,5 @@ describe Game do
       expect { game.console_feedback }.to output("teacup\n10 apples left.\nyou win!\n").to_stdout
     end
   end
-
-
-
-
 
 end

@@ -13,7 +13,7 @@ class Game
   end
 
   def revealed_word
-    word_keeper.revealed_word
+    word_keeper.revealed_word.join
   end
 
   def guess(letter)
@@ -22,7 +22,7 @@ class Game
   end
 
   def console_feedback
-    puts revealed_word.join
+    puts revealed_word
     puts "#{apples} apples left."
     puts 'you lose!' if apples == 0
     puts 'you win!' if word_keeper.guessed_word?
