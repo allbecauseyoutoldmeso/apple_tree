@@ -7,6 +7,9 @@
 * Uses an API request to 'setgetgo.com' to generate a random obscure word.
 * You can play it <a href='http://sample-env.x5bkmmyqkj.us-east-1.elasticbeanstalk.com'>here</a>!
 
-<img width="825" alt="screen shot 2017-06-25 at 16 17 51" src="https://user-images.githubusercontent.com/25392162/27517286-ee50ba70-59c1-11e7-944b-a73d4bdeafd0.png">     
+<img width="1128" alt="screen shot 2017-06-25 at 17 19 44" src="https://user-images.githubusercontent.com/25392162/27519681-cd051e04-59f0-11e7-80b4-9a48cd5f9852.png">          
 
-<img width="823" alt="screen shot 2017-06-25 at 15 38 27" src="https://user-images.githubusercontent.com/25392162/27517056-ee916822-59bc-11e7-9cf7-893b949c7a5d.png">
+
+<img width="1126" alt="screen shot 2017-06-25 at 17 19 02" src="https://user-images.githubusercontent.com/25392162/27519683-d1ac521a-59f0-11e7-8b50-e804719dd60a.png">
+
+<img width="1124" alt="screen shot 2017-06-25 at 17 17 16" src="https://user-images.githubusercontent.com/25392162/27519682-d0101036-59f0-11e7-9b33-d0dc1ad2a8d6.png">
