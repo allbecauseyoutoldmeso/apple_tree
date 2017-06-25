@@ -1,7 +1,8 @@
-feature 'game is initiated' do
+feature 'playing appletree' do
 
-  scenario 'game starts when user visits homepage' do
+  scenario 'user can visit homepage and choose to start a game' do
     visit('/')
-    expect(page).to have_content '------'
+    click_button 'play game'
+    expect(page).to have_content 'guess a letter'
   end
 end
