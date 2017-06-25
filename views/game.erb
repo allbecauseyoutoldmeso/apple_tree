@@ -9,7 +9,7 @@
 
 <body>
 
-  <p>apple tree</p>
+  <p class="title">apple tree</p>
 
   <%@game.apples.times do%>
     <img id='apple-picture' src='/apple.png'>
@@ -30,7 +30,7 @@
   <%else%>
 
     <p class="instructions">guess a letter:<p>
-      
+
     <form action="/guess" method="post">
       <input type="text" name="guess"/><br>
       <input class="appletree-button" type="submit" value="guess"/>

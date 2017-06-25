@@ -10,14 +10,18 @@ body {
   font-size: 45px;
 }
 
+p {
+  margin: 0px;
+}
+
+.title {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
 #apple-picture {
   height: 100px;
   width: 84px;
-}
-
-#revealved-word {
-  padding: 0px;
-  margin: 0px;
 }
 
 .instructions {
