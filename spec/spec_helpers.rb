@@ -8,6 +8,11 @@ def enter_correct_letter
   submit_letter('t')
 end
 
+def enter_incorrect_letter
+  visit '/testgame'
+  submit_letter('x')
+end
+
 def win_game
   visit '/testgame'
   ['t','e','a','c','u','p'].each { |letter| submit_letter(letter) }
