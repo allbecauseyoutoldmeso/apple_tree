@@ -9,19 +9,18 @@
 
 <body>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
   <p>apple tree</p>
 
   <%@game.apples.times do%>
-    <img src='/apple.png'>
+    <img id='apple-picture' src='/apple.png'>
   <%end%>
 
-  <p><%=@game.revealed_word%></p>
+  <p id="revealed-word"><%=@game.revealed_word%></p>
 
   <form action="/guess" method="post">
-    guess a letter: <input type="text" name="guess"/>
-    <input id="guess-button" type="submit" value="guess"/>
+    <p id="guess-a-letter">guess a letter:<p>
+    <input type="text" name="guess"/><br>
+    <input class="appletree-button" type="submit" value="guess"/>
   </form>
 
 </body>
