@@ -3,8 +3,7 @@ require 'spec_helpers'
 feature 'playing appletree' do
 
   scenario 'user can visit homepage and choose to start a game' do
-    visit('/')
-    click_button 'play game'
+    start_game
     expect(page).to have_content 'guess a letter'
   end
 
@@ -14,9 +13,7 @@ feature 'playing appletree' do
   end
 
   scenario 'when a correct letter is submitted it is added to the revealed word' do
-    visit '/testgame'
-    fill_in :guess, with: 't'
-    click_button 'guess'
+    enter_correct_letter
     expect(page).to have_content 't-----'
   end
 
@@ -28,6 +25,12 @@ feature 'playing appletree' do
   scenario 'a lose message is displayed if all the letters are guessed' do
     lose_game
     expect(page).to have_content 'you lose. the word was teacup.'
+  end
+
+  scenario 'player can start a new game' do
+    lose_game
+    click_button 'play again'
+    expect(page).to have_content 'guess a letter'
   end
 
 end

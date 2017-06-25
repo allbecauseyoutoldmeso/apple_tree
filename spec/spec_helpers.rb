@@ -3,6 +3,11 @@ def start_game
   click_button 'play game'
 end
 
+def enter_correct_letter
+  visit '/testgame'
+  submit_letter('t')
+end
+
 def win_game
   visit '/testgame'
   ['t','e','a','c','u','p'].each { |letter| submit_letter(letter) }
