@@ -20,8 +20,7 @@ class AppleTree < Sinatra::Base
   end
 
   post '/guess' do
-    game = session[:game]
-    game.guess(params[:guess])
+    session[:game].guess(params[:guess])
     redirect '/game'
   end
 

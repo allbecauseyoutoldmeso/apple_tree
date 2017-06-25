@@ -11,6 +11,12 @@
 
   <p>apple tree</p>
 
+  <%10.times do%>
+    <img id='apple-picture' src='/apple.png'>
+  <%end%>
+
+  <p class="instructions">try to guess the hidden word.  for every incorrect letter an apple falls.  if all the apples fall, you lose!</p>
+
   <form action="/game/new" method="post">
     <input class="appletree-button" type="submit" value="play game"/>
   </form>

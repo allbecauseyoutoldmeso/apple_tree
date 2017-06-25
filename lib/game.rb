@@ -19,7 +19,6 @@ class Game
 
   def guess(letter)
     word_keeper.secret_word_includes?(letter) ? word_keeper.reveal_letters(letter) : self.apples -= 1
-    console_feedback
   end
 
   def final_message
@@ -28,13 +27,6 @@ class Game
 
   def game_over?
     word_keeper.guessed_word? || apples == 0
-  end
-
-  def console_feedback
-    puts revealed_word
-    puts "#{apples} apples left."
-    puts 'you lose!' if apples == 0
-    puts 'you win!' if word_keeper.guessed_word?
   end
 
 end
