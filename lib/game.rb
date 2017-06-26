@@ -1,6 +1,7 @@
 require_relative 'word_maker'
 require_relative 'word_keeper'
 require_relative 'dash'
+require_relative 'dictionary_manager'
 
 class Game
 
@@ -30,7 +31,7 @@ class Game
   end
 
   def word_definition
-    "#{word}: #{WordMaker.new.get_definition(word)}"
+    "#{word}: #{DictionaryManager.new.get_definition(word)}"
   end
 
 end

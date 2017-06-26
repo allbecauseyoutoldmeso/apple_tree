@@ -13,13 +13,4 @@ describe WordMaker do
     end
   end
 
-  describe '#get_definition' do
-    it 'returns the definition of a word' do
-      expect(word_maker.get_definition('toaster')).to eq 'an electrical device for making toast.'
-    end
-    it 'returns a message if no definition available' do
-      expect(word_maker.get_definition('jupati')).to eq 'no definition available from oxford dictionaries.'
-    end
-  end
-
 end
