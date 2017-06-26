@@ -26,12 +26,8 @@ class AppleTree < Sinatra::Base
 
   get '/testgame' do
     class Teacup
-      def word
-        'teacup'
-      end
-      def definition
-        'a cup from which tea is drunk.'
-      end
+      def word() 'teacup' end
+      def definition() 'a cup from which tea is drunk.' end
     end
     session[:game] = Game.new(Teacup.new)
     redirect '/game'
