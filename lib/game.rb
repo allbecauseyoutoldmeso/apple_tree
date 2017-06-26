@@ -8,7 +8,7 @@ class Game
   attr_reader :word_keeper, :word
   attr_accessor :apples
 
-  def initialize(word=WordMaker.new.get_word(6))
+  def initialize(word=WordMaker.new.word)
     @apples = 10
     @word = word
     @word_keeper = WordKeeper.new(word)
