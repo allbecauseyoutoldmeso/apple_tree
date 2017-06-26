@@ -2,7 +2,7 @@ require 'net/http'
 # require 'openssl'
 require 'json'
 
-uri = URI.parse('https://od-api.oxforddictionaries.com:443/api/v1/entries/en/toaster')
+uri = URI.parse('https://od-api.oxforddictionaries.com:443/api/v1/entries/en/teacup')
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true

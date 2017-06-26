@@ -44,7 +44,12 @@ describe Game do
       ['w','x','f','y','m','l','d','r','h','k'].each { |letter| game.guess(letter) }
       expect(game.final_message).to eq 'you lose. the word was teacup.'
     end
+  end
 
+  describe('#word_definition') do
+    it 'returns a definition of the secret word' do
+      expect(game.word_definition).to eq 'Definition: a cup from which tea is drunk.'
+    end
   end
 
 end

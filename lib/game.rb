@@ -29,4 +29,8 @@ class Game
     word_keeper.guessed_word? || apples == 0
   end
 
+  def word_definition
+    "Definition: #{WordMaker.new.get_definition(word)}"
+  end
+
 end
