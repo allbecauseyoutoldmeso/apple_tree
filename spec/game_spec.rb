@@ -48,7 +48,7 @@ describe Game do
 
   describe('#word_definition') do
     it 'returns a definition of the secret word' do
-      expect(game.word_definition).to eq 'Definition: a cup from which tea is drunk.'
+      expect(game.word_definition).to eq 'teacup: a cup from which tea is drunk.'
     end
   end
 

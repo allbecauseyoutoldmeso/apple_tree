@@ -30,7 +30,7 @@ class Game
   end
 
   def word_definition
-    "Definition: #{WordMaker.new.get_definition(word)}"
+    "#{word}: #{WordMaker.new.get_definition(word)}"
   end
 
 end

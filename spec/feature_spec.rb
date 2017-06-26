@@ -34,7 +34,7 @@ feature 'playing appletree' do
 
   scenario 'when the word is revealed a definition is supplied' do
     win_game
-    expect(page).to have_content 'Definition: a cup from which tea is drunk.'
+    expect(page).to have_content 'teacup: a cup from which tea is drunk.'
   end
 
   scenario 'player can start a new game' do
