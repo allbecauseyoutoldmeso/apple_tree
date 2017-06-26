@@ -8,9 +8,8 @@
 * Uses a second API request to 'oxforddictionaries.com' to give you the definition of the word when the game ends.
 * You can play it <a href='http://sample-env.x5bkmmyqkj.us-east-1.elasticbeanstalk.com'>here</a>!
 
-<img width="1128" alt="screen shot 2017-06-25 at 17 19 44" src="https://user-images.githubusercontent.com/25392162/27519681-cd051e04-59f0-11e7-80b4-9a48cd5f9852.png">          
+<img width="1279" alt="screen shot 2017-06-26 at 13 35 36" src="https://user-images.githubusercontent.com/25392162/27543259-a4b1e90a-5a81-11e7-8e57-9944a0e47b29.png">
 
+<img width="1278" alt="screen shot 2017-06-26 at 15 09 35" src="https://user-images.githubusercontent.com/25392162/27543261-a7df74b2-5a81-11e7-97f0-f9ab0203753d.png">
 
-<img width="1126" alt="screen shot 2017-06-25 at 17 19 02" src="https://user-images.githubusercontent.com/25392162/27519683-d1ac521a-59f0-11e7-8b50-e804719dd60a.png">
-
-<img width="1124" alt="screen shot 2017-06-25 at 17 17 16" src="https://user-images.githubusercontent.com/25392162/27519682-d0101036-59f0-11e7-9b33-d0dc1ad2a8d6.png">
+<img width="1278" alt="screen shot 2017-06-26 at 15 09 50" src="https://user-images.githubusercontent.com/25392162/27543264-a9f8d2ca-5a81-11e7-8fbc-8dce52155ce6.png">

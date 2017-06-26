@@ -2,7 +2,8 @@ require 'game'
 
 describe Game do
 
-  subject(:game) { described_class.new('teacup') }
+  let(:word_maker) { double :word_maker, word: 'teacup', definition: 'a cup from which tea is drunk.' }
+  subject(:game) { described_class.new(word_maker) }
 
   describe('#apples') do
     it 'initially returns 10' do
