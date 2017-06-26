@@ -16,7 +16,7 @@ class WordMaker
     request['app_id'] = '1999668e'
     request['app_key'] = '193c4f346db04dbe4f2bf28efd7ee8b2'
     response = http.request(request)
-    JSON.parse(response.body)['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['definitions'][0]
+    response.is_a?(Net::HTTPSuccess) ? JSON.parse(response.body)['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['definitions'][0] : 'no definition available from oxford dictionaries.'
   end
 
 end
