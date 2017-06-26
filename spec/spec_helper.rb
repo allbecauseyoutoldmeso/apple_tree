@@ -3,6 +3,12 @@ require_relative '../app.rb'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'rack_session_access'
+require 'rack_session_access/capybara'
+
+AppleTree.configure do |app|
+  app.use RackSessionAccess::Middleware
+end
 
 Capybara.app = AppleTree
 

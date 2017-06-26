@@ -24,14 +24,5 @@ class AppleTree < Sinatra::Base
     redirect '/game'
   end
 
-  get '/testgame' do
-    class Teacup
-      def word() 'teacup' end
-      def definition() 'a cup from which tea is drunk.' end
-    end
-    session[:game] = Game.new(Teacup.new)
-    redirect '/game'
-  end
-
   run! if app_file == $0
 end

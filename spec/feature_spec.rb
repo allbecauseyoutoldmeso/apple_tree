@@ -8,7 +8,7 @@ feature 'playing appletree' do
   end
 
   scenario 'game starts with six empty dashes' do
-    start_game
+    start_testgame
     expect(page).to have_content '------'
   end
 
