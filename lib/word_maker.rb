@@ -10,14 +10,9 @@ class WordMaker
   end
 
   def get_valid_word
-    word = get_word
-    definition_response = get_definition(word)
-    if definition_response.is_a?(Net::HTTPSuccess)
-      @word = word
-      @definition = JSON.parse(definition_response.body)['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['definitions'][0]
-    else
-      get_valid_word
-    end
+    @word = get_word
+    get_definition_response = get_definition(word)
+    get_definition_response.is_a?(Net::HTTPSuccess) ? @definition = JSON.parse(get_definition_response.body)['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['definitions'][0] : get_valid_word
   end
 
   def get_word
