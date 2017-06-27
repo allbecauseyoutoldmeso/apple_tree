@@ -3,7 +3,7 @@ require 'json'
 
 class WordMaker
 
-  attr_accessor :word, :definition
+  attr_reader :word, :definition
 
   def initialize
     get_valid_word
