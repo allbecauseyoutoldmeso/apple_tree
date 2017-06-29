@@ -7,9 +7,7 @@ class WordKeeper
   end
 
   def make_dashes(word)
-    dashes = []
-    word.each_char { |char| dashes.push(Dash.new(char)) }
-    dashes
+    word.split('').map { |letter| Dash.new(letter) }
   end
 
   def revealed_word
