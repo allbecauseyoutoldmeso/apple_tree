@@ -38,13 +38,11 @@
       <input class="appletree-button" type="submit" value="guess"/>
     </form>
 
-    <p> incorrect guesses: </p>
-
-    <p>
-      <%@game.incorrect_guesses.each do |guess|%>
-        <span class='incorrect'><%=guess%> </span>
-      <%end%>
-    </p>
+      <p>
+        <%@game.incorrect_guesses.each do |guess|%>
+          <span class="incorrect"><%=guess%></span><span> </span>
+        <%end%>
+      </p>
 
   <%end%>
 

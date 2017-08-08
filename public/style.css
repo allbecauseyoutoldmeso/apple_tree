@@ -47,3 +47,7 @@ input[type=text] {
   font-size: 45px;
   color: #e6302c;
 }
+
+.incorrect {
+  text-decoration: line-through;
+}
