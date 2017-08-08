@@ -26,6 +26,14 @@ describe Game do
     end
   end
 
+  describe('#incorrect_guesses') do
+    it 'returns an array of incorrectly guessed letters' do
+      game.guess('k')
+      game.guess('g')
+      expect(game.incorrect_guesses).to eq ['k','g']
+    end
+  end
+
   describe('#game_over?') do
     it 'is false initially' do
       expect(game.game_over?).to eq false

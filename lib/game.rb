@@ -4,13 +4,14 @@ require_relative 'dash'
 
 class Game
 
-  attr_reader :word_keeper, :word_maker
+  attr_reader :word_keeper, :word_maker, :incorrect_guesses
   attr_accessor :apples
 
   def initialize(word_maker = WordMaker.new)
     @apples = 10
     @word_maker = word_maker
     @word_keeper = WordKeeper.new(word_maker.word)
+    @incorrect_guesses = []
   end
 
   def revealed_word
@@ -18,7 +19,13 @@ class Game
   end
 
   def guess(letter)
-    word_keeper.secret_word_includes?(letter.downcase) ? word_keeper.reveal_letters(letter.downcase) : self.apples -= 1
+    letter = letter.downcase
+    if word_keeper.secret_word_includes?(letter)
+      word_keeper.reveal_letters(letter)
+    else
+      self.apples -= 1
+      incorrect_guesses.push(letter)  
+    end
   end
 
   def final_message
