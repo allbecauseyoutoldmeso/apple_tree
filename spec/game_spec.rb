@@ -16,6 +16,10 @@ describe Game do
       game.guess('i')
       expect(game.apples).to eq 9
     end
+    it 'works with upper or lower case letters' do
+      game.guess('I')
+      expect(game.apples).to eq 9
+    end
     it 'reveals a letter if the guess is correct' do
       game.guess('c')
       expect(game.revealed_word).to eq '---c--'

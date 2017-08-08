@@ -18,7 +18,7 @@ class Game
   end
 
   def guess(letter)
-    word_keeper.secret_word_includes?(letter) ? word_keeper.reveal_letters(letter) : self.apples -= 1
+    word_keeper.secret_word_includes?(letter.downcase) ? word_keeper.reveal_letters(letter.downcase) : self.apples -= 1
   end
 
   def final_message
