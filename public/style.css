@@ -50,4 +50,5 @@ input[type=text] {
 
 .incorrect {
   text-decoration: line-through;
+  text-decoration-color: #e6302c; 
 }
