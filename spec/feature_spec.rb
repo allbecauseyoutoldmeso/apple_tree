@@ -2,10 +2,20 @@ require 'spec_helpers'
 
 feature 'playing appletree' do
 
-  scenario 'user can visit homepage and choose to start a game' do
-    start_game
-    expect(page).to have_content 'guess a letter'
-  end
+  # scenario 'user can visit homepage and start an intermediate game' do
+  #   start_intermediate_game
+  #   expect(page).to have_content '------'
+  # end
+  #
+  # scenario 'user can visit homepage and start an easy game' do
+  #   start_easy_game
+  #   expect(page).to have_content '----'
+  # end
+  #
+  # scenario 'user can visit homepage and start a difficult game' do
+  #   start_easy_game
+  #   expect(page).to have_content '--------'
+  # end
 
   scenario 'game starts with six empty dashes' do
     start_testgame

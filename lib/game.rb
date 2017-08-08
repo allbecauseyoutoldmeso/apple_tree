@@ -7,7 +7,7 @@ class Game
   attr_reader :word_keeper, :word_maker, :incorrect_guesses
   attr_accessor :apples
 
-  def initialize(word_maker = WordMaker.new)
+  def initialize(word_maker = WordMaker.new(6))
     @apples = 10
     @word_maker = word_maker
     @word_keeper = WordKeeper.new(word_maker.word)
@@ -24,7 +24,7 @@ class Game
       word_keeper.reveal_letters(letter)
     else
       self.apples -= 1
-      incorrect_guesses.push(letter)  
+      incorrect_guesses.push(letter)
     end
   end
 

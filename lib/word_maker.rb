@@ -3,9 +3,10 @@ require 'json'
 
 class WordMaker
 
-  attr_reader :word, :definition
+  attr_reader :word, :definition, :word_length
 
-  def initialize
+  def initialize(word_length)
+    @word_length = word_length.to_s
     get_valid_word
   end
 
@@ -16,7 +17,7 @@ class WordMaker
   end
 
   def get_word
-    uri = URI('http://setgetgo.com/randomword/get.php?len=6')
+    uri = URI('http://setgetgo.com/randomword/get.php?len=' + word_length)
     Net::HTTP.get(uri).downcase
   end
 

@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/game'
+require_relative './lib/word_maker'
 
 class AppleTree < Sinatra::Base
 
@@ -10,7 +11,10 @@ class AppleTree < Sinatra::Base
   end
 
   post '/game/new' do
-    session[:game] = Game.new
+    levels = {"easy" => 4, "intermediate" => 6, "difficult" => 8}
+    # require 'pry'; binding.pry
+    word_maker = WordMaker.new(levels[params[:level]])
+    session[:game] = Game.new(word_maker)
     redirect '/game'
   end
 

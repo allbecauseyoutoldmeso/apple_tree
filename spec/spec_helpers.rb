@@ -1,6 +1,16 @@
-def start_game
+def start_intermediate_game
   visit('/')
-  click_button 'play game'
+  click_button 'intermediate'
+end
+
+def start_easy_game
+  visit('/')
+  click_button 'easy'
+end
+
+def start_difficult_game
+  visit('/')
+  click_button 'difficult'
 end
 
 def enter_correct_letter
