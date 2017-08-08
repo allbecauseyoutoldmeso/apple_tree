@@ -22,6 +22,11 @@ feature 'playing appletree' do
     expect(page).to have_content '------'
   end
 
+  scenario 'when an incorrect letter is submitted it is displayed on the page' do
+    enter_incorrect_letter
+    expect(page).to have_content 'x'
+  end
+
   scenario 'a win message is displayed if all the letters are guessed' do
     win_game
     expect(page).to have_content 'you won!'
