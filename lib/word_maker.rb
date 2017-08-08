@@ -6,7 +6,7 @@ class WordMaker
   attr_reader :word, :definition, :word_length
 
   def initialize(word_length)
-    @word_length = word_length.to_s
+    @word_length = word_length
     get_valid_word
   end
 

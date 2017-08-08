@@ -2,7 +2,7 @@ require 'word_maker'
 
 describe WordMaker do
 
-  subject(:word_maker) { described_class.new(6) }
+  subject(:word_maker) { described_class.new("6") }
 
   describe '#word' do
     it 'returns a word' do

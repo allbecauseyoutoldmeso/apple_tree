@@ -11,10 +11,8 @@ class AppleTree < Sinatra::Base
   end
 
   post '/game/new' do
-    levels = {"easy" => 4, "intermediate" => 6, "difficult" => 8}
-    # require 'pry'; binding.pry
-    word_maker = WordMaker.new(levels[params[:level]])
-    session[:game] = Game.new(word_maker)
+    levels = {"easy" => "4", "intermediate" => "6", "difficult" => "8"}
+    session[:game] = Game.new(WordMaker.new(levels[params[:level]]))
     redirect '/game'
   end
 

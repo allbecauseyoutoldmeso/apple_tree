@@ -2,20 +2,20 @@ require 'spec_helpers'
 
 feature 'playing appletree' do
 
-  # scenario 'user can visit homepage and start an intermediate game' do
-  #   start_intermediate_game
-  #   expect(page).to have_content '------'
-  # end
-  #
-  # scenario 'user can visit homepage and start an easy game' do
-  #   start_easy_game
-  #   expect(page).to have_content '----'
-  # end
-  #
-  # scenario 'user can visit homepage and start a difficult game' do
-  #   start_easy_game
-  #   expect(page).to have_content '--------'
-  # end
+  scenario 'user can visit homepage and start an intermediate game' do
+    start_intermediate_game
+    expect(page).to have_content '------'
+  end
+
+  scenario 'user can visit homepage and start an easy game' do
+    start_easy_game
+    expect(page).to have_content '----'
+  end
+
+  scenario 'user can visit homepage and start a difficult game' do
+    start_difficult_game
+    expect(page).to have_content '--------'
+  end
 
   scenario 'game starts with six empty dashes' do
     start_testgame
@@ -52,10 +52,10 @@ feature 'playing appletree' do
     expect(page).to have_content 'teacup: a cup from which tea is drunk.'
   end
 
-  scenario 'player can start a new game' do
+  scenario 'player is redirected to the home page if they want to start a new game' do
     lose_game
     click_button 'play again'
-    expect(page).to have_content 'guess a letter'
+    expect(page).to have_content 'try to guess the hidden word'
   end
 
 end
