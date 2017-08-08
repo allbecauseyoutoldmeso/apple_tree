@@ -6,7 +6,7 @@
 * A Ruby/Sinatra app, TDDed using RSpec and Capybara.
 * Uses an API request to 'setgetgo.com' to generate a random word.
 * Uses a second API request to 'oxforddictionaries.com' to give you the definition of the word when the game ends.
-* You can play it <a href='http://sample-env.x5bkmmyqkj.us-east-1.elasticbeanstalk.com'>here</a>!
+* You can play it <a href='https://apple-tree-game.herokuapp.com/game'>here</a>!
 
 <img width="1237" alt="screen shot 2017-08-08 at 21 09 30" src="https://user-images.githubusercontent.com/25392162/29092703-2ad94040-7c7f-11e7-9791-25d64b231848.png">
 
