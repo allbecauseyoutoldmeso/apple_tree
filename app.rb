@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require_relative './lib/game'
-require_relative './lib/word_maker'
 
 class AppleTree < Sinatra::Base
 
